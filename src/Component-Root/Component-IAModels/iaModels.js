@@ -1,6 +1,6 @@
 import React from "react";
 import DropdownButton from "react-bootstrap/DropdownButton";
-import iaModels from "../services/listModels";
+import iaModels from "../../services/listModels";
 
 class IAModels extends React.Component {
 

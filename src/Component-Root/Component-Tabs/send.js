@@ -1,5 +1,5 @@
 import React from "react"
-import sendfiles from '../services/sendFiles'
+import sendfiles from '../../services/sendFiles'
 
 
 class Send extends React.Component {

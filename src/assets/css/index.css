@@ -134,10 +134,10 @@
   margin-right: 2rem;
 }
 
-.all-tab{
+/* .all-tab{
   background-image: linear-gradient( to top, #f0f9ff 0%,#a1dbff 100% );
   height: auto;
-}
+} */
 
 .tableBordered{
   border: 1px solid black;
