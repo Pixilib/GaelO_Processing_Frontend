@@ -1,11 +1,9 @@
 import React from "react";
-import "bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import MyDropzone from './dragAndDrop'
+import MyDropzone from './DropZone'
 import Explanations from './explanations'
 import Pyradiomics from '../Component-Pyradiomics/pyradiomics';
 import IAModels from '../Component-IAModels/iaModels'
-import Send from './send';
+import Send from './send'
 
 
 class Test extends React.Component{
@@ -48,8 +46,8 @@ class Test extends React.Component{
     </div>
    
       </div>
-      <div className="tab-pane fade all-tab" id="pyradiomics" role="tabpanel" aria-labelledby="pyradiomics-tab"><Pyradiomics></Pyradiomics></div>
-      <div className="tab-pane fade all-tab" id="IAModels" role="tabpanel" aria-labelledby="IAModels-tab"><IAModels></IAModels></div>
+      <div className="tab-pane fade all-tab" id="pyradiomics" role="tabpanel" aria-labelledby="pyradiomics-tab"><Pyradiomics/></div>
+      <div className="tab-pane fade all-tab" id="IAModels" role="tabpanel" aria-labelledby="IAModels-tab"><IAModels/></div>
     </div>
     </div>
       }

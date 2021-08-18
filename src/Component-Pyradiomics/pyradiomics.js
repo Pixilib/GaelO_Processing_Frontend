@@ -21,15 +21,7 @@ class Pyradiomics extends React.Component {
       jsonInput : "Your JSON here",
       delete: null,
       hasError: false,
-    };
-    this.handleGetListImage = this.handleGetListImage.bind(this);
-    this.handleGetListMask = this.handleGetListMask.bind(this);
-    this.handleSelectedImage = this.handleSelectedImage.bind(this);
-    this.handleSelectedMask = this.handleSelectedMask.bind(this);
-    this.handlePyradiomics = this.handlePyradiomics.bind(this);
-    this.handleGetMetadata = this.handleGetMetadata.bind(this);
-    this.handleDeleteImg = this.handleDeleteImg.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    }
   }
 
   handleGetListImage = async () => {
@@ -76,13 +68,13 @@ class Pyradiomics extends React.Component {
     }
   };
 
-  handleSelectedImage(e) {
+  handleSelectedImage = (e) => {
     this.setState({
       slectedImage: e,
     });
   }
 
-  handleSelectedMask(e) {
+  handleSelectedMask = (e) => {
     this.setState({
       selectedMask: e,
     });
@@ -135,13 +127,13 @@ class Pyradiomics extends React.Component {
     }
   };
 
-  handleChange(e){
+  handleChange = (e) =>  {
   this.setState({
     jsonInput:e.target.value
   })
 }
 
-  render() {
+  render  = () =>  {
     const {
       listImages,
       listMasks,

@@ -1,23 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import ControlledTabs from './Component-Tabs/tabs'
-import Title from './Component-Title/title'
-import Test from './Component-Tabs/test'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import image from './assets/images/gaelo-logo.svg'
+import RootComponent from './Component-Tabs/test'
+
+import Image from 'react-bootstrap/Image'
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './assets/css/index.css'
 
 
-class App extends React.Component{
+class App extends React.Component {
 
-    render(){
+    render() {
         return <div>
-            <Title/>
-            <Test/>
-            {/* <ControlledTabs/> */}
-        </div> 
+
+            <div className="d-flex justify-content-center title">
+                <Image src={image} fluid height='25%' width='25%' />
+            </div>
+            <RootComponent />
+        </div>
     }
 }
 
 ReactDOM.render(
     <App />,
     document.getElementById("root")
-  );
+);
