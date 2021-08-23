@@ -1,49 +1,40 @@
-import React from "react";
+import React, { useState }  from "react";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import iaModels from "../../services/listModels";
 
-class IAModels extends React.Component {
+function IAModels () {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      listModels: [],
-      selectedModel: "",
-    }
-  };
+  
+    const [listModels, setlistModels]= useState([])
+    const [selectedModel,setselectedModel]=useState("")
+    
 
-  handleGetListModels = async () => {
+  const handleGetListModels = async () => {
     let answer;
     try {
       answer = await iaModels.getModels();
-      this.setState({
-        listModels: answer,
-      });
-      console.log(this.state.listModels)
-      console.log(typeof (this.state.listModels))
+        setlistModels(answer)
+      console.log(listModels)
+      console.log(typeof (listModels))
     } catch (error) {
       console.log(error);
     }
   };
 
-  handleSelectedModel(e) {
-    this.setState({
-      selectedModel: e,
-    });
+  const handleSelectedModel = (e) => {
+      setselectedModel(e)
     console.log(e)
-    console.log(this.state.selectedModel)
+    console.log(selectedModel)
   }
 
-  render() {
-    const { listModels
 
-    } = this.state;
+   
     // const models = listModels.map((listModel, index) => (
     //     <Dropdown.Item
     //       id={index}
     //       key={index}
     //       onClick={() => {
-    //         this.handleSelectedModel(listModel);
+    //         handleSelectedModel(listModel);
     //       }}
     //     >
     //       {listModel}
@@ -55,14 +46,14 @@ class IAModels extends React.Component {
           variant="info"
           title="IA Models"
           className="drop-btn"
-          onClick={this.handleGetListModels}
+          onClick={handleGetListModels}
         >
           {/* {models} */}
         </DropdownButton>
 
       </div>
     )
-  }
+  
 
 
 }

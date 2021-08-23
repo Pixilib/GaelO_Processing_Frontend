@@ -5,7 +5,7 @@ import apis from "../../services/apis";
 import pyradiomics from "../../services/pyradiomics";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
-import Modal from "./modal";
+import Modal from "./Modal";
 
 function Pyradiomics() {
   const [listImages, setlistImages] = useState([]);
@@ -30,6 +30,8 @@ function Pyradiomics() {
     }
   };
 
+useEffect(handleGetListImage)
+
   const handlePyradiomics = async () => {
     let answer;
     try {
@@ -53,6 +55,8 @@ function Pyradiomics() {
       console.log(error);
     }
   };
+  
+  useEffect(handleGetListMask)
 
   const handleSelectedImage = (e) => {
     setslectedImage(e);
@@ -110,6 +114,7 @@ function Pyradiomics() {
       alert(del)}
       setdel(null)
   },[del])
+
 
   const handleChange = (e) => {
       setjsonInput(e.target.value)

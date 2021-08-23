@@ -2,7 +2,7 @@ import React from "react";
 import MyDropzone from './DropZone'
 import Explanations from './explanations'
 import Pyradiomics from '../Component-Pyradiomics/pyradiomics';
-import IAModels from '../Component-IAModels/iaModels'
+import IAModels from '../Component-IAModels/IaModels'
 import Send from './send'
 
 

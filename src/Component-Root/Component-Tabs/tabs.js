@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MyDropzone from './dragAndDrop'
+import MyDropzone from './DropZone'
 import Explanations from './explanations'
 import Pyradiomics from '../Component-Pyradiomics/pyradiomics';
-import Send from './send';
 import Test from './test';
 
 function ControlledTabs(props) {
@@ -33,16 +32,14 @@ function ControlledTabs(props) {
             <tbody>
               <tr>
                 <th>
-                  <MyDropzone />
+                  <MyDropzone id="image" />
                 </th>
                 <th>
-                  <MyDropzone />
+                  <MyDropzone id="mask" />
                 </th>
               </tr>
             </tbody>
           </table>
-          <Send />
-          <Test />
           <Explanations />
         </div>
       </Tab>

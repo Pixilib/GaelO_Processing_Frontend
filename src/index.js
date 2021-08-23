@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import image from "./assets/images/gaelo-logo.svg";
 import RootComponent from "./Component-Root/Component-Tabs/test"
+import ControlledTabs from "./Component-Root/Component-Tabs/tabs";
 
 import Image from "react-bootstrap/Image";
 
@@ -15,7 +16,7 @@ class App extends React.Component {
         <div className="d-flex justify-content-center title">
           <Image src={image} fluid height="25%" width="25%" />
         </div>
-        <RootComponent />
+        <ControlledTabs />
       </div>
     );
   }
