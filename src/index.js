@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import image from "./assets/images/gaelo-logo.svg";
-import RootComponent from "./Component-Root/Component-Tabs/test"
-import ControlledTabs from "./Component-Root/Component-Tabs/tabs";
+import ControlledTabs from "./Component-Root/Component-Tabs/Tabs";
 
 import Image from "react-bootstrap/Image";
 

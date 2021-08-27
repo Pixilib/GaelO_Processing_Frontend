@@ -29,6 +29,35 @@ const idImages = {
         throw error;
       });
   },
+  getIdDicom() {
+    return fetch("/app/dicoms", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((answer) => {
+        return answer.json();
+      })
+      .catch((error) => {
+        throw error;
+      });
+  },
+  getModels: () =>
+  fetch("/app/models", {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  })
+    .then((answer) => {
+      return answer.json();
+    })
+    .catch((error) => {
+      throw error;
+    }),
 }
 
 

@@ -24,13 +24,13 @@ export default function Dropzone(props) {
     for (let file of acceptedFiles) {
       await __fileReader(file).then(async (reader) => {
         try {
-          if (props.id == "image") {
+          if (props.id === "image") {
             const stringBuffer = reader.result
             let response = await sendfiles.sendImgFiles(stringBuffer);
             let responsestr = JSON.stringify(response, null, 4);
             setidimage(responsestr);
           }
-          if (props.id == "mask") {
+          if (props.id === "mask") {
             const stringBuffer = reader.result
             let response = await sendfiles.sendMaskFiles(stringBuffer);
             let responsestr = JSON.stringify(response, null, 4);
