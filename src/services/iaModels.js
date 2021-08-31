@@ -1,10 +1,6 @@
 const iamodels = {
     post_iamodels(slectedModel,slectedImage) {
-        const json = '{"id":'+slectedImage+'}'
-        const file= JSON.parse(json)
-        console.log(slectedModel)
-        console.log(slectedImage)
-        console.log(file)
+
       return fetch(
         "/app/models/"+slectedModel+"/inference",
         {
@@ -13,11 +9,14 @@ const iamodels = {
             Accept: "application/json",
             "Content-Type": "application/json; charset=utf-8",
           },
-           body: file
+           body: JSON.stringify({
+             id : slectedImage
+           })
         }
       )
         .then((answer) => {
-            console.log(answer)
+          console.log(answer)
+          if(!answer.OK) throw answer
           return answer.json();
         })
         .catch((error) => {

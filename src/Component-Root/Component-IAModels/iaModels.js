@@ -23,7 +23,9 @@ function IAModels() {
         slectedImage,
       );
       setiaAnswer(answer);
+      console.log(iaAnswer)
     } catch (error) {
+      console.log(error)
       sethasError(true);
     }
   };
